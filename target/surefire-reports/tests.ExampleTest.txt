@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: tests.ExampleTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 18.968 sec <<< FAILURE!
+testExample(tests.ExampleTest)  Time elapsed: 13.923 sec  <<< FAILURE!
+FindFailed: C:\Users\ltuser\Downloads\uploadButton.png: (0x0) in R[0,0 1440x900]@S(0)
+  Line 2226, in file Region.java
+	at org.sikuli.script.Region.wait(Region.java:2226)
+	at org.sikuli.script.Region.wait(Region.java:2244)
+	at org.sikuli.script.Region.getLocationFromTarget(Region.java:3298)
+	at org.sikuli.script.Region.click(Region.java:3916)
+	at org.sikuli.script.Region.click(Region.java:3892)
+	at tests.ExampleTest.testExample(ExampleTest.java:36)
+

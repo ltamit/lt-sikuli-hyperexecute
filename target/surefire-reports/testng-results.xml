@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-24T17:36:40 IST" name="tests.ExampleTest" finished-at="2023-08-24T17:36:59 IST" duration-ms="18571">
+    <groups>
+    </groups>
+    <test started-at="2023-08-24T17:36:40 IST" name="Command line test" finished-at="2023-08-24T17:36:59 IST" duration-ms="18571">
+      <class name="tests.ExampleTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.ExampleTest@6e2c9341]" started-at="2023-08-24T17:36:40 IST" name="setup" finished-at="2023-08-24T17:36:44 IST" duration-ms="3800" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testExample()[pri:0, instance:tests.ExampleTest@6e2c9341]" started-at="2023-08-24T17:36:44 IST" name="testExample" finished-at="2023-08-24T17:36:58 IST" duration-ms="13913" status="FAIL">
+          <exception class="org.sikuli.script.FindFailed">
+            <message>
+              <![CDATA[C:\Users\ltuser\Downloads\uploadButton.png: (0x0) in R[0,0 1440x900]@S(0)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[FindFailed: C:\Users\ltuser\Downloads\uploadButton.png: (0x0) in R[0,0 1440x900]@S(0)
+  Line 2226, in file Region.java
+
+at org.sikuli.script.Region.wait(Region.java:2226)
+at org.sikuli.script.Region.wait(Region.java:2244)
+at org.sikuli.script.Region.getLocationFromTarget(Region.java:3298)
+at org.sikuli.script.Region.click(Region.java:3916)
+at org.sikuli.script.Region.click(Region.java:3892)
+at tests.ExampleTest.testExample(ExampleTest.java:36)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.sikuli.script.FindFailed -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExample -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ExampleTest@6e2c9341]" started-at="2023-08-24T17:36:58 IST" name="tearDown" finished-at="2023-08-24T17:36:59 IST" duration-ms="817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.ExampleTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- tests.ExampleTest -->
+</testng-results>

@@ -1,0 +1,63 @@
+version: "0.1"
+user: amitwalia
+key: SjOTOTQikYHfho5r39aieNJACmUoiofHmhZB8jUyCUG439zMXW
+testSuites: []
+pre: [mvn -Dmaven.repo.local=./.m2 -Dmaven.test.skip=true clean install]
+preDirectives:
+    commands: [mvn -Dmaven.repo.local=./.m2 -Dmaven.test.skip=true clean install]
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
+postDirectives:
+    commands: []
+    shell: ""
+    workingDirectory: ""
+env:
+    CACHE_DIR: m2_cache_dir
+runson: win
+autosplit: true
+concurrency: 1
+testDiscovery:
+    autosubset: true
+    command: grep 'Test_1' testng.xml | awk '{print$4}' | sed 's/name=//g' | sed 's/\x3e//g' | sed 's/"//' | sed 's/"//'
+    mode: dynamic
+    shell: bash
+    type: raw
+testRunnerCommand: mvn test `-Dtests=$test
+testSuiteTimeout: 90
+cacheDirectories:
+    - $CACHE_DIR
+cacheKey: '{{ checksum "pom.xml" }}'
+retryOnFailure: true
+maxRetries: 1
+jobID: 92145960-5276-4b69-a778-a5ef36fbe1f1
+codeDirectory: sikulix
+runtime:
+    language: java
+    version: "17"
+    addons: []
+framework:
+    name: ""
+    flags: []
+    discoveryFlags: []
+    discoveryType: ""
+    runnerFlags: []
+    workingDirectory: ""
+    isTestNGXMLSuite: false
+    defaultReports: true
+    additional_args: null
+    licenseKey: ""
+    userdefinediscovery: false
+    toscaArgs: null
+    version: ""
+    downloadURL: ""
+cypress: false
+betaFeature:
+    setPartiallyCompletedAsCompleted: false
+combineTasksInMatrixMode: false
+captureScreenRecordingForScenarios: false
+maxRetriesPreSteps: 0
+triggerMode: false
+collectLocalGitData: true
+dynamicAllocation: false
+appium: false

@@ -1,0 +1,33 @@
+---
+version: 0.1
+runson: win
+testSuiteTimeout: 90
+autosplit: true
+retryOnFailure: true
+maxRetries: 1
+concurrency: 1
+# shell: bash
+
+env:
+  CACHE_DIR: m2_cache_dir
+
+cacheKey: '{{ checksum "pom.xml" }}'
+cacheDirectories:
+  - $CACHE_DIR
+
+runtime:
+    language: java
+    version: 17
+
+pre:
+  # Create the Cache directory
+  - mvn -Dmaven.repo.local=./.m2 -Dmaven.test.skip=true clean install
+
+
+testDiscovery:
+  type: raw
+  mode: dynamic
+  shell: bash
+  command: grep 'Test_1' testng.xml | awk '{print$4}' | sed 's/name=//g' | sed 's/\x3e//g' | sed 's/"//' | sed 's/"//'
+
+testRunnerCommand: mvn test `-Dtests=$test
